@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AetherFlow - Build fully functional web apps in minutes using AI. Describe your idea in plain English and AetherFlow creates the database, user auth, and frontend instantly.">
+    <meta name="keywords" content="AI app builder, no-code platform, SaaS generator, app creator, prompt to app, instant hosting">
+    <meta name="author" content="AetherFlow AI">
+    <title>AetherFlow | Turn Your Idea Into a Working App in Minutes</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Blur Decorative Blobs -->
+    <div class="blob-bg blob-1" id="blob-1"></div>
+    <div class="blob-bg blob-2" id="blob-2"></div>
+    <div class="blob-bg blob-3" id="blob-3"></div>
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" id="nav-logo">
+                <span class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+                        <line x1="12" y1="22" x2="12" y2="15.5"></line>
+                        <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+                        <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
+                        <line x1="12" y1="2" x2="12" y2="8.5"></line>
+                    </svg>
+                </span>
+                <span class="logo-text">Appify</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#features" class="nav-link" id="nav-link-features">Features</a>
+                <a href="#showcase" class="nav-link" id="nav-link-showcase">Showcase</a>
+                <a href="#pricing" class="nav-link" id="nav-link-pricing">Pricing</a>
+                <a href="#faq" class="nav-link" id="nav-link-faq">FAQ</a>
+                <a href="#pricing" class="btn btn-primary nav-cta-mobile" id="nav-cta-mobile">Start Free</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#pricing" class="btn btn-secondary nav-login" id="nav-login">Sign In</a>
+                <a href="#pricing" class="btn btn-primary nav-cta" id="nav-cta-desktop">Start Free</a>
+                <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="section-container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">Designed By Prashant</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Turn your idea into a <span class="gradient-text">working app</span> in minutes
+                    </h1>
+                    <p class="hero-subtitle">
+                        Describe your concept in plain English. AetherFlow automatically builds the frontend, generates the database, configures user authentication, and deploys it instantly.
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="#pricing" class="btn btn-primary btn-lg" id="hero-cta-primary">
+                            <span>Start Building</span>
+                            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#showcase" class="btn btn-secondary btn-lg" id="hero-cta-secondary">See how it works</a>
+                    </div>
+                    <div class="hero-metrics">
+                        <div class="metric-item">
+                            <span class="metric-number">150k+</span>
+                            <span class="metric-label">Apps built</span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <span class="metric-number">98%</span>
+                            <span class="metric-label">Time saved</span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <span class="metric-number">4.9/5</span>
+                            <span class="metric-label">User rating</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="browser-mockup">
+                        <div class="browser-header">
+                            <div class="browser-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="browser-address">aetherflow.ai/editor</div>
+                        </div>
+                        <div class="browser-body">
+                            <div class="prompt-container">
+                                <div class="prompt-input-wrapper">
+                                    <div class="prompt-prompt-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                        </svg>
+                                    </div>
+                                    <input type="text" class="prompt-input" id="hero-demo-input" readonly value="Build a real-time team task manager with a drag-and-drop kanban board, time tracking, and dark mode.">
+                                    <button class="btn btn-primary prompt-submit" id="hero-demo-btn">
+                                        <span class="btn-text">Generate</span>
+                                        <svg class="sparkles-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707-.707M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="workspace-preview" id="workspace-preview-canvas">
+                                <div class="loading-state" id="hero-loading-state">
+                                    <div class="spinner"></div>
+                                    <span class="loading-text">Analyzing prompt...</span>
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar-fill" id="hero-progress-fill"></div>
+                                    </div>
+                                    <ul class="generation-steps" id="hero-generation-steps">
+                                        <li class="step-li active" id="step-1">Planning application architecture...</li>
+                                        <li class="step-li" id="step-2">Generating relational database schema...</li>
+                                        <li class="step-li" id="step-3">Writing backend business logic...</li>
+                                        <li class="step-li" id="step-4">Creating responsive dashboard UI...</li>
+                                    </ul>
+                                </div>
+                                <div class="preview-app-container active" id="hero-app-mockup">
+                                    <!-- A mock app container will be dynamically simulated here -->
+                                    <div class="mock-app-header">
+                                        <div class="mock-app-logo">📋 taskly.flow</div>
+                                        <div class="mock-app-nav">
+                                            <span class="mock-nav-item active">Dashboard</span>
+                                            <span class="mock-nav-item">Tasks</span>
+                                            <span class="mock-nav-item">Team</span>
+                                        </div>
+                                    </div>
+                                    <div class="mock-app-content">
+                                        <div class="mock-sidebar">
+                                            <div class="sidebar-item active">📁 Active Projects</div>
+                                            <div class="sidebar-item-sub">🚀 Launch campaign</div>
+                                            <div class="sidebar-item-sub">🎨 Redesign Website</div>
+                                            <div class="sidebar-item">📊 Reports</div>
+                                        </div>
+                                        <div class="mock-main">
+                                            <div class="mock-dashboard-header">
+                                                <h3>Project Workspace</h3>
+                                                <button class="mock-btn-add">+ New Task</button>
+                                            </div>
+                                            <div class="mock-board">
+                                                <div class="mock-col">
+                                                    <div class="col-title">To Do <span class="badge">2</span></div>
+                                                    <div class="mock-card">
+                                                        <div class="card-tag tag-marketing">Marketing</div>
+                                                        <p class="card-desc">Write copy for landing page</p>
+                                                        <div class="card-meta">📅 Today • 👤 PM</div>
+                                                    </div>
+                                                    <div class="mock-card">
+                                                        <div class="card-tag tag-design">Design</div>
+                                                        <p class="card-desc">Design custom vector icons</p>
+                                                        <div class="card-meta">📅 Tomorrow • 👤 AD</div>
+                                                    </div>
+                                                </div>
+                                                <div class="mock-col">
+                                                    <div class="col-title">In Progress <span class="badge">1</span></div>
+                                                    <div class="mock-card">
+                                                        <div class="card-tag tag-development">Dev</div>
+                                                        <p class="card-desc">Set up authentication router</p>
+                                                        <div class="card-meta">⏳ Active • 👤 JE</div>
+                                                    </div>
+                                                </div>
+                                                <div class="mock-col">
+                                                    <div class="col-title">Done <span class="badge">1</span></div>
+                                                    <div class="mock-card card-completed">
+                                                        <div class="card-tag tag-design">Design</div>
+                                                        <p class="card-desc">App wireframe sketches</p>
+                                                        <div class="card-meta">✅ Completed • 👤 AD</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Features Section -->
+        <section class="features-section" id="features">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Engineered to <span class="gradient-text">eliminate friction</span></h2>
+                    <p class="section-subtitle">AetherFlow handles the complex technical stack, so you can focus entirely on your product vision.</p>
+                </div>
+                <div class="features-layout">
+                    <!-- Feature Selector (Tabs) -->
+                    <div class="features-list" id="features-tabs-list">
+                        <button class="feature-tab active" data-feature="0" id="feature-tab-0">
+                            <div class="tab-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                </svg>
+                            </div>
+                            <div class="tab-text">
+                                <h3 class="tab-title">Create at the speed of thought</h3>
+                                <p class="tab-desc">Describe your idea, get a working app instantly with pages, flows, and design.</p>
+                            </div>
+                        </button>
+                        
+                        <button class="feature-tab" data-feature="1" id="feature-tab-1">
+                            <div class="tab-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                    <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                                </svg>
+                            </div>
+                            <div class="tab-text">
+                                <h3 class="tab-title">Backend that builds itself</h3>
+                                <p class="tab-desc">Auto-generated user authentication, database, permissions, and logic rules.</p>
+                            </div>
+                        </button>
+                        <button class="feature-tab" data-feature="2" id="feature-tab-2">
+                            <div class="tab-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="tab-text">
+                                <h3 class="tab-title">Ready to use instantly</h3>
+                                <p class="tab-desc">Built-in hosting, analytics, custom domains, and one-click publish.</p>
+                            </div>
+                        </button>
+                        <button class="feature-tab" data-feature="3" id="feature-tab-3">
+                            <div class="tab-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                                    <line x1="15" y1="3" x2="15" y2="21"></line>
+                                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                                    <line x1="3" y1="15" x2="21" y2="15"></line>
+                                </svg>
+                            </div>
+                            <div class="tab-text">
+                                <h3 class="tab-title">Any AI model, your choice</h3>
+                                <p class="tab-desc">Automatically selects the optimal model or lets you choose manually.</p>
+                            </div>
+                        </button>
+                    </div>
+                    <!-- Feature Graphic Panel (Dynamic Content) -->
+                    <div class="feature-display-panel" id="feature-display-panel">
+                        <div class="feature-panel-content active" id="feature-panel-0">
+                            <div class="panel-header">
+                                <span class="panel-tag">AI Design Engine</span>
+                                <h4>Instant App Synthesis</h4>
+                            </div>
+                            <div class="panel-visual text-editor-visual">
+                                <div class="terminal-mockup">
+                                    <div class="terminal-header">
+                                        <span class="term-dot"></span>
+                                        <span class="term-dot"></span>
+                                        <span class="term-dot"></span>
+                                    </div>
+                                    <div class="terminal-body font-mono">
+                                        <span class="c-blue">aetherflow</span> <span class="c-green">create-app</span> --name "crm" <br>
+                                        <span class="c-gray">● Analysing natural language prompt...</span><br>
+                                        <span class="c-gray">● Synthesizing React frontend code structure...</span><br>
+                                        <span class="c-gray">● Compiling layout variables and layout tree...</span><br>
+                                        <span class="c-green">✔ Generated 5 views, 12 interactive components, 3 database tables.</span><br>
+                                        <span class="c-purple">▶ App deployment online at: https://crm-app.aetherflow.app</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-panel-content" id="feature-panel-1">
+                            <div class="panel-header">
+                                <span class="panel-tag">Self-Governing Database</span>
+                                <h4>Automatic Relational Schema</h4>
+                            </div>
+                            <div class="panel-visual db-visual">
+                                <div class="database-schema-diagram">
+                                    <div class="schema-table">
+                                        <div class="table-title">users</div>
+                                        <div class="table-row">🔑 id <span class="type">UUID</span></div>
+                                        <div class="table-row">📧 email <span class="type">text</span></div>
+                                        <div class="table-row">🔒 password_hash <span class="type">text</span></div>
+                                        <div class="table-row">📅 created_at <span class="type">timestamp</span></div>
+                                    </div>
+                                    <div class="schema-connector">
+                                        <svg viewBox="0 0 100 40" fill="none" stroke="#FF6B35" stroke-width="2">
+                                            <path d="M0,20 L100,20" stroke-dasharray="4,4"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="schema-table">
+                                        <div class="table-title">profiles</div>
+                                        <div class="table-row">🔑 id <span class="type">UUID</span></div>
+                                        <div class="table-row">👤 user_id <span class="type">UUID (FK)</span></div>
+                                        <div class="table-row">🏷️ display_name <span class="type">text</span></div>
+                                        <div class="table-row">🖼️ avatar_url <span class="type">text</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-panel-content" id="feature-panel-2">
+                            <div class="panel-header">
+                                <span class="panel-tag">Global CDN Hosting</span>
+                                <h4>Zero-Configuration Publishing</h4>
+                            </div>
+                            <div class="panel-visual publish-visual">
+                                <div class="cloud-publish-container">
+                                    <div class="pulse-circle"></div>
+                                    <div class="publish-status-box">
+                                        <div class="status-indicator online"></div>
+                                        <div class="status-info">
+                                            <span class="status-name">live-production-build</span>
+                                            <span class="status-domain">mycompany.com</span>
+                                        </div>
+                                        <span class="status-pill">99.99% Uptime</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-panel-content" id="feature-panel-3">
+                            <div class="panel-header">
+                                <span class="panel-tag">Model Orchestrator</span>
+                                <h4>Optimal Intelligence Selection</h4>
+                            </div>
+                            <div class="panel-visual model-visual">
+                                <div class="model-selection-grid">
+                                    <div class="model-badge active">
+                                        <div class="model-icon claude"></div>
+                                        <span>Gemini 1.5 Pro</span>
+                                        <div class="model-metrics">Fast Reasoning</div>
+                                    </div>
+                                    <div class="model-badge">
+                                        <div class="model-icon gpt"></div>
+                                        <span>Claude 3.5 Sonnet</span>
+                                        <div class="model-metrics">Complex Logic</div>
+                                    </div>
+                                    <div class="model-badge">
+                                        <div class="model-icon custom"></div>
+                                        <span>Llama 3.1 405B</span>
+                                        <div class="model-metrics">Data Analysis</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- App Examples Section (Showcase) -->
+        <section class="showcase-section" id="showcase">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">See what you can <span class="gradient-text">build instantly</span></h2>
+                    <p class="section-subtitle">Interactive prototypes demonstrating exactly what AetherFlow's engine compiles in real-time.</p>
+                </div>
+                <!-- Apps tabs menu -->
+                <div class="showcase-tabs-container">
+                    <div class="showcase-tabs" role="tablist">
+                        <button class="showcase-tab active" data-app="task-manager" role="tab" aria-selected="true" id="tab-task-manager">Task Manager</button>
+                        <button class="showcase-tab" data-app="finance-dashboard" role="tab" aria-selected="false" id="tab-finance-dashboard">Finance Dashboard</button>
+                        <button class="showcase-tab" data-app="meal-planner" role="tab" aria-selected="false" id="tab-meal-planner">Meal Planner</button>
+                        <button class="showcase-tab" data-app="learning-hub" role="tab" aria-selected="false" id="tab-learning-hub">Learning Hub</button>
+                        <button class="showcase-tab" data-app="adventure-planner" role="tab" aria-selected="false" id="tab-adventure-planner">Adventure Planner</button>
+                    </div>
+                </div>
+                <!-- Showcase Simulator Container (Glassmorphic browser mockup) -->
+                <div class="showcase-simulator">
+                    <div class="browser-header">
+                        <div class="browser-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="browser-address" id="showcase-url">https://task-manager.aetherflow.app</div>
+                        <div class="browser-actions-right">
+                            <span class="responsive-indicator mobile-v">📱 Mobile View</span>
+                            <span class="responsive-indicator desktop-v active">💻 Desktop View</span>
+                        </div>
+                    </div>
+                    <div class="simulator-body" id="simulator-canvas">
+                        <!-- Task Manager App Mockup -->
+                        <div class="app-mockup active" id="app-task-manager">
+                            <div class="app-topbar">
+                                <div class="app-title">🎯 FlowTask</div>
+                                <div class="app-profile-avatar">👨‍💻</div>
+                            </div>
+                            <div class="task-manager-dashboard">
+                                <div class="task-input-row">
+                                    <input type="text" class="task-new-input" id="todo-new-task-title" placeholder="Add a new task to your board...">
+                                    <button class="btn btn-primary btn-sm" id="todo-add-btn">Add Task</button>
+                                </div>
+                                <div class="kanban-grid">
+                                    <div class="kanban-column" id="col-todo">
+                                        <div class="kanban-col-header">To Do (<span class="col-count">2</span>)</div>
+                                        <div class="kanban-cards-list" id="todo-list-tasks">
+                                            <div class="kanban-card" data-task-id="t1">
+                                                <div class="kb-card-tags"><span class="kb-tag priority-high">High</span></div>
+                                                <p class="kb-card-title">Setup production database replica</p>
+                                                <div class="kb-card-footer">
+                                                    <span class="kb-date">📅 May 30</span>
+                                                    <button class="kb-action-btn move-progress" title="Move to In Progress">👉</button>
+                                                </div>
+                                            </div>
+                                            <div class="kanban-card" data-task-id="t2">
+                                                <div class="kb-card-tags"><span class="kb-tag priority-low">Low</span></div>
+                                                <p class="kb-card-title">Update API documentation assets</p>
+                                                <div class="kb-card-footer">
+                                                    <span class="kb-date">📅 June 5</span>
+                                                    <button class="kb-action-btn move-progress" title="Move to In Progress">👉</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kanban-column" id="col-inprogress">
+                                        <div class="kanban-col-header">In Progress (<span class="col-count">1</span>)</div>
+                                        <div class="kanban-cards-list" id="inprogress-list-tasks">
+                                            <div class="kanban-card" data-task-id="t3">
+                                                <div class="kb-card-tags"><span class="kb-tag priority-med">Medium</span></div>
+                                                <p class="kb-card-title">Develop client dashboard routing</p>
+                                                <div class="kb-card-footer">
+                                                    <span class="kb-date">⏳ Active</span>
+                                                    <button class="kb-action-btn move-done" title="Complete task">✅</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kanban-column" id="col-completed">
+                                        <div class="kanban-col-header">Completed (<span class="col-count">1</span>)</div>
+                                        <div class="kanban-cards-list" id="completed-list-tasks">
+                                            <div class="kanban-card completed" data-task-id="t4">
+                                                <div class="kb-card-tags"><span class="kb-tag priority-med">Completed</span></div>
+                                                <p class="kb-card-title">Initialize React template scaffold</p>
+                                                <div class="kb-card-footer">
+                                                    <span class="kb-date">🎉 Closed</span>
+                                                    <button class="kb-action-btn delete-task" title="Delete task">🗑️</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Finance Dashboard App Mockup -->
+                        <div class="app-mockup" id="app-finance-dashboard">
+                            <div class="app-topbar">
+                                <div class="app-title">💳 Apex Wallet</div>
+                                <div class="app-balance-header">Balance: <span class="text-green" id="wallet-balance">$14,248.50</span></div>
+                            </div>
+                            <div class="finance-grid">
+                                <div class="finance-main-card">
+                                    <h4>Revenue Summary</h4>
+                                    <div class="finance-chart-placeholder">
+                                        <div class="chart-bar" style="height: 40%"><span>Jan</span></div>
+                                        <div class="chart-bar" style="height: 60%"><span>Feb</span></div>
+                                        <div class="chart-bar" style="height: 55%"><span>Mar</span></div>
+                                        <div class="chart-bar" style="height: 85%"><span>Apr</span></div>
+                                        <div class="chart-bar" style="height: 75%"><span>May</span></div>
+                                        <div class="chart-bar active" style="height: 95%"><span>Jun</span></div>
+                                    </div>
+                                </div>
+                                <div class="finance-recent-transactions">
+                                    <div class="finance-header-row">
+                                        <h4>Transactions</h4>
+                                        <button class="btn btn-secondary btn-sm" id="finance-add-income">+ Add transaction</button>
+                                    </div>
+                                    <div class="transaction-list" id="transaction-list-ul">
+                                        <div class="tx-item">
+                                            <div class="tx-info">
+                                                <span class="tx-name">Stripe Payout</span>
+                                                <span class="tx-date">Today at 10:24 AM</span>
+                                            </div>
+                                            <span class="tx-amount income">+$4,250.00</span>
+                                        </div>
+                                        <div class="tx-item">
+                                            <div class="tx-info">
+                                                <span class="tx-name">AWS Web Hosting</span>
+                                                <span class="tx-date">Yesterday</span>
+                                            </div>
+                                            <span class="tx-amount expense">-$420.50</span>
+                                        </div>
+                                        <div class="tx-item">
+                                            <div class="tx-info">
+                                                <span class="tx-name">Figma Subscription</span>
+                                                <span class="tx-date">May 25, 2026</span>
+                                            </div>
+                                            <span class="tx-amount expense">-$45.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Meal Planner App Mockup -->
+                        <div class="app-mockup" id="app-meal-planner">
+                            <div class="app-topbar">
+                                <div class="app-title">🥗 NutriPlan</div>
+                                <span class="app-meta-text">Target: 2,100 kcal / day</span>
+                            </div>
+                            <div class="meal-grid">
+                                <div class="meal-days-sidebar">
+                                    <button class="meal-day-btn active" data-day="monday">Monday</button>
+                                    <button class="meal-day-btn" data-day="tuesday">Tuesday</button>
+                                    <button class="meal-day-btn" data-day="wednesday">Wednesday</button>
+                                    <button class="meal-day-btn" data-day="thursday">Thursday</button>
+                                    <button class="meal-day-btn" data-day="friday">Friday</button>
+                                </div>
+                                <div class="meal-content-panel">
+                                    <div class="meal-day-header">
+                                        <h4 id="meal-current-day">Monday Meals</h4>
+                                        <span class="calories-badge" id="meal-cal-sum">Total Calories: 1,840 kcal</span>
+                                    </div>
+                                    <div class="meal-items-list" id="meal-list-container">
+                                        <div class="meal-card-item">
+                                            <span class="meal-time">🍳 Breakfast</span>
+                                            <div class="meal-details">
+                                                <h5>Avocado Toast & Poached Eggs</h5>
+                                                <p>2 slices sourdough, 1 avocado, 2 eggs</p>
+                                            </div>
+                                            <span class="meal-calories">420 kcal</span>
+                                        </div>
+                                        <div class="meal-card-item">
+                                            <span class="meal-time">🥗 Lunch</span>
+                                            <div class="meal-details">
+                                                <h5>Grilled Chicken Caesar Salad</h5>
+                                                <p>150g chicken breast, romaine lettuce, parmesan</p>
+                                            </div>
+                                            <span class="meal-calories">580 kcal</span>
+                                        </div>
+                                        <div class="meal-card-item">
+                                            <span class="meal-time">🥩 Dinner</span>
+                                            <div class="meal-details">
+                                                <h5>Pan-seared Salmon & Quinoa</h5>
+                                                <p>200g salmon fillet, 1 cup quinoa, asparagus</p>
+                                            </div>
+                                            <span class="meal-calories">840 kcal</span>
+                                        </div>
+                                    </div>
+                                    <div class="meal-actions-row">
+                                        <button class="btn btn-primary btn-sm" id="meal-regenerate-btn">↻ Regenerate Day</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Learning Hub App Mockup -->
+                        <div class="app-mockup" id="app-learning-hub">
+                            <div class="app-topbar">
+                                <div class="app-title">🎓 EduCenter</div>
+                                <div class="app-xp-counter">⭐ 2,450 XP</div>
+                            </div>
+                            <div class="learning-grid">
+                                <div class="learning-active-course">
+                                    <h4>My Enrolled Courses</h4>
+                                    <div class="course-progress-card">
+                                        <div class="course-info-row">
+                                            <div>
+                                                <h5>Advanced JavaScript Design Patterns</h5>
+                                                <p class="instructor">Instructor: Sarah Chen</p>
+                                            </div>
+                                            <span class="course-percentage" id="js-course-percentage">68%</span>
+                                        </div>
+                                        <div class="progress-bar-container">
+                                            <div class="progress-bar-fill" id="js-course-progress-bar" style="width: 68%"></div>
+                                        </div>
+                                        <div class="course-card-actions">
+                                            <button class="btn btn-primary btn-sm" id="learning-continue-btn">Continue Class</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="learning-lessons-list">
+                                    <h4>Curriculum</h4>
+                                    <div class="lesson-items">
+                                        <div class="lesson-row completed">
+                                            <span class="lesson-icon">✓</span>
+                                            <span class="lesson-name">1. Closure Scopes & Lexical Environments</span>
+                                            <span class="lesson-xp">+100 XP</span>
+                                        </div>
+                                        <div class="lesson-row completed">
+                                            <span class="lesson-icon">✓</span>
+                                            <span class="lesson-name">2. Prototype Chains & Inheritance Models</span>
+                                            <span class="lesson-xp">+150 XP</span>
+                                        </div>
+                                        <div class="lesson-row current" id="current-lesson-row">
+                                            <span class="lesson-icon">⏳</span>
+                                            <span class="lesson-name">3. The Module Pattern & Revealing Modules</span>
+                                            <span class="lesson-xp">+200 XP</span>
+                                        </div>
+                                        <div class="lesson-row">
+                                            <span class="lesson-icon">🔒</span>
+                                            <span class="lesson-name">4. Observer & Singleton Implementations</span>
+                                            <span class="lesson-xp">+250 XP</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Outdoor Adventure Planner App Mockup -->
+                        <div class="app-mockup" id="app-adventure-planner">
+                            <div class="app-topbar">
+                                <div class="app-title">🏕️ TrailBlaze</div>
+                                <span class="weather-report">🏔️ Yosemite • Clear, 68°F</span>
+                            </div>
+                            <div class="adventure-grid">
+                                <div class="adventure-itinerary">
+                                    <div class="adv-header-row">
+                                        <h4>Yosemite Backpacking Trip</h4>
+                                        <span class="badge duration">3 Days</span>
+                                    </div>
+                                    <div class="itinerary-timeline">
+                                        <div class="timeline-event">
+                                            <div class="timeline-time">Day 1</div>
+                                            <div class="timeline-body">
+                                                <h5>Valley Trailhead to Upper Yosemite Falls</h5>
+                                                <p>Ascent: 2,600 ft. Total distance: 7.2 miles. Camp at Yosemite Creek.</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-event">
+                                            <div class="timeline-time">Day 2</div>
+                                            <div class="timeline-body">
+                                                <h5>Yosemite Creek to North Dome</h5>
+                                                <p>Ascent: 800 ft. Total distance: 9.5 miles. Camp at North Dome overlooking Half Dome.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="adventure-gear-checklist">
+                                    <h4>Packing Checklist</h4>
+                                    <div class="checklist-items" id="gear-checklist-container">
+                                        <label class="checklist-item checked">
+                                            <input type="checkbox" checked class="gear-checkbox">
+                                            <span>3-Season Backpacking Tent</span>
+                                        </label>
+                                        <label class="checklist-item checked">
+                                            <input type="checkbox" checked class="gear-checkbox">
+                                            <span>Sleeping Bag (rated 20°F)</span>
+                                        </label>
+                                        <label class="checklist-item">
+                                            <input type="checkbox" class="gear-checkbox">
+                                            <span>Portable Filtration Pump</span>
+                                        </label>
+                                        <label class="checklist-item">
+                                            <input type="checkbox" class="gear-checkbox">
+                                            <span>Topographic Map & Compass</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing Section -->
+        <section class="pricing-section" id="pricing">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Transparent, <span class="gradient-text">scale-ready pricing</span></h2>
+                    <p class="section-subtitle">Start building for free, and scale seamlessly as your userbase and applications grow.</p>
+                </div>
+                <div class="pricing-toggle-wrapper">
+                    <span class="toggle-label active" id="billing-monthly">Monthly</span>
+                    <button class="pricing-toggle-btn" id="pricing-billing-toggle" aria-label="Toggle billing frequency">
+                        <span class="toggle-dot"></span>
+                    </button>
+                    <span class="toggle-label" id="billing-yearly">Yearly <span class="save-tag">Save 20%</span></span>
+                </div>
+                <div class="pricing-grid">
+                    <!-- Free Tier Card -->
+                    <div class="pricing-card" id="pricing-free-card">
+                        <div class="pricing-card-header">
+                            <h3 class="tier-name">Starter</h3>
+                            <p class="tier-desc">Perfect for side projects, prototypes, and testing ideas.</p>
+                            <div class="tier-price">
+                                <span class="currency">$</span>
+                                <span class="price-val" id="price-starter">0</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <div class="pricing-card-features">
+                            <ul class="features-list-items">
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Build up to 3 active applications</span>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Built-in sandbox relational database</span>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>AetherFlow subdomain hosting (`.aetherflow.app`)</span>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Standard AI generation speed</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pricing-card-cta">
+                            <button class="btn btn-secondary btn-full" id="cta-free">Get Started Free</button>
+                        </div>
+                    </div>
+                    <!-- Paid Tier Card (Pro) -->
+                    <div class="pricing-card featured" id="pricing-pro-card">
+                        <div class="popular-ribbon">Most Popular</div>
+                        <div class="pricing-card-header">
+                            <h3 class="tier-name">Pro</h3>
+                            <p class="tier-desc">For creators, professional developers, and scaling products.</p>
+                            <div class="tier-price">
+                                <span class="currency">$</span>
+                                <span class="price-val" id="price-pro">20</span>
+                                <span class="period" id="price-period-pro">/month</span>
+                            </div>
+                        </div>
+                        <div class="pricing-card-features">
+                            <ul class="features-list-items">
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span><strong>Unlimited</strong> active applications</span>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Production-grade PostgreSQL database</span>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Custom domains + free SSL certificates</span>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Priority AI model queue (instant generations)</span>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Export clean React/Node.js source code</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pricing-card-cta">
+                            <button class="btn btn-primary btn-full" id="cta-pro">Go Pro Today</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- See all plans & Enterprise Contact Area -->
+                <div class="pricing-footer">
+                    <button class="link-btn" id="see-all-plans-btn">See all features & comparison table ▾</button>
+                    
+                    <div class="plans-comparison-table-wrapper" id="comparison-table">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Starter</th>
+                                    <th>Pro</th>
+                                    <th>Enterprise</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monthly Price</td>
+                                    <td>$0</td>
+                                    <td class="table-price-pro">$20/mo</td>
+                                    <td>Custom Pricing</td>
+                                </tr>
+                                <tr>
+                                    <td>Active Applications</td>
+                                    <td>3</td>
+                                    <td>Unlimited</td>
+                                    <td>Unlimited</td>
+                                </tr>
+                                <tr>
+                                    <td>Hosting</td>
+                                    <td>Subdomain</td>
+                                    <td>Custom Domain</td>
+                                    <td>Dedicated/Multi-region</td>
+                                </tr>
+                                <tr>
+                                    <td>AI Engines</td>
+                                    <td>Standard (Shared)</td>
+                                    <td>Advanced (Priority)</td>
+                                    <td>Custom Trained models</td>
+                                </tr>
+                                <tr>
+                                    <td>Code Export</td>
+                                    <td>❌ No</td>
+                                    <td>✅ Full Access</td>
+                                    <td>✅ Full Access</td>
+                                </tr>
+                                <tr>
+                                    <td>SLA & Support</td>
+                                    <td>Community</td>
+                                    <td>Email Priority</td>
+                                    <td>Dedicated Slack + 99.9% SLA</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="enterprise-banner">
+                        <div class="enterprise-content">
+                            <h4>Need dedicated infrastructure, custom LLMs, or SSO integration?</h4>
+                            <p>Get robust compliance, volume discounts, and custom service level agreements for enterprise scaling.</p>
+                        </div>
+                        <button class="btn btn-secondary" id="contact-enterprise-btn">Contact Enterprise Sales</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently asked <span class="gradient-text">questions</span></h2>
+                    <p class="section-subtitle">Everything you need to know about the AetherFlow platform, code deployment, and pricing.</p>
+                </div>
+                <div class="faq-accordion-container">
+                    <div class="faq-item" id="faq-item-1">
+                        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-1" id="faq-btn-1">
+                            <span class="faq-question">What is AetherFlow?</span>
+                            <span class="faq-icon-plus"></span>
+                        </button>
+                        <div class="faq-answer-wrapper" id="faq-answer-1" role="region">
+                            <div class="faq-answer">
+                                <p>AetherFlow is an AI-powered no-code SaaS generator that allows you to build completely functioning web applications by describing them in plain language. Unlike traditional visual builders, AetherFlow writes clean, high-quality production code, structures databases, maps API endpoints, and deploys it on our global cloud network in seconds.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item" id="faq-item-2">
+                        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-2" id="faq-btn-2">
+                            <span class="faq-question">How does AetherFlow build apps?</span>
+                            <span class="faq-icon-plus"></span>
+                        </button>
+                        <div class="faq-answer-wrapper" id="faq-answer-2" role="region">
+                            <div class="faq-answer">
+                                <p>When you describe your app, our AI compilation agent translates your description into structural, logical, and style schemas. It then builds a full relational database, creates API routes, configures user authentication rules, generates a responsive React/Vite frontend UI, and compiles it all. Once successfully tested, the app is built and hosted globally on our edge network.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item" id="faq-item-3">
+                        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-3" id="faq-btn-3">
+                            <span class="faq-question">Do I need coding experience to use AetherFlow?</span>
+                            <span class="faq-icon-plus"></span>
+                        </button>
+                        <div class="faq-answer-wrapper" id="faq-answer-3" role="region">
+                            <div class="faq-answer">
+                                <p>No coding experience is required! You can build complete apps entirely with English descriptions. However, if you are a developer, AetherFlow serves as an exceptional accelerator. You can write custom code, export the synthesized codebase, edit files manually via our code editor, or link it directly to your GitHub repository.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item" id="faq-item-4">
+                        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-4" id="faq-btn-4">
+                            <span class="faq-question">Where are my created apps deployed?</span>
+                            <span class="faq-icon-plus"></span>
+                        </button>
+                        <div class="faq-answer-wrapper" id="faq-answer-4" role="region">
+                            <div class="faq-answer">
+                                <p>All apps created on AetherFlow are automatically deployed to our globally-distributed edge CDN network, powered by AWS and Cloudflare. This ensures sub-100ms response times globally. Pro and Enterprise customers can easily hook up custom domain names with automatic SSL renewal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item" id="faq-item-5">
+                        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-5" id="faq-btn-5">
+                            <span class="faq-question">Is my application data secure?</span>
+                            <span class="faq-icon-plus"></span>
+                        </button>
+                        <div class="faq-answer-wrapper" id="faq-answer-5" role="region">
+                            <div class="faq-answer">
+                                <p>Absolutely. Security is engineered directly into our schema generation. AetherFlow automatically writes standard Row-Level Security (RLS) rules for your database, uses secure JSON Web Token (JWT) structures for user sessions, and shields your database behind a secure backend API layer. All connections are encrypted via TLS 1.3.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item" id="faq-item-6">
+                        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-6" id="faq-btn-6">
+                            <span class="faq-question">Who owns the intellectual property of the created apps?</span>
+                            <span class="faq-icon-plus"></span>
+                        </button>
+                        <div class="faq-answer-wrapper" id="faq-answer-6" role="region">
+                            <div class="faq-answer">
+                                <p>You do! You have 100% intellectual property ownership of your application structure, designs, data schemas, and the compiled code. On the Pro plan, you can export your codebase at any time, host it on your own server, and even license or sell it independently.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Contact & Feedback Modal (Popup) -->
+    <div class="modal-overlay" id="contact-modal">
+        <div class="modal-card glass-panel">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <div class="modal-body">
+                <h3>Contact Enterprise Sales</h3>
+                <p>Tell us about your organization's custom app generation, dedicated hosting, or volume needs.</p>
+                <form class="modal-form" id="enterprise-form" onsubmit="event.preventDefault(); alert('Request submitted successfully! Our team will reach out within 2 hours.'); document.getElementById('contact-modal').classList.remove('active');">
+                    <div class="form-group">
+                        <label for="ent-name">Full Name</label>
+                        <input type="text" id="ent-name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="ent-email">Work Email</label>
+                        <input type="email" id="ent-email" required placeholder="john@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="ent-message">Company Requirements</label>
+                        <textarea id="ent-message" rows="4" required placeholder="Describe your team size, database scaling requirements, or model requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-branding">
+                <a href="#" class="logo">
+                    <span class="logo-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+                            <line x1="12" y1="22" x2="12" y2="15.5"></line>
+                            <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+                        </svg>
+                    </span>
+                    <span class="logo-text">AetherFlow</span>
+                </a>
+                <p class="footer-desc">Empowering visionaries to build complex production web applications using simple language.</p>
+                <div class="footer-newsletter">
+                    <h5>Subscribe to our developer newsletter</h5>
+                    <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+                        <input type="email" placeholder="Enter your email" required aria-label="Newsletter email input" id="newsletter-email">
+                        <button type="submit" class="btn btn-primary btn-sm" id="newsletter-submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-links-grid">
+                <div class="footer-link-col">
+                    <h6>Product</h6>
+                    <a href="#features">AI Engines</a>
+                    <a href="#showcase">Showcase Apps</a>
+                    <a href="#pricing">Pricing Table</a>
+                    <a href="#">Roadmap</a>
+                </div>
+                <div class="footer-link-col">
+                    <h6>Company</h6>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press Kit</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-link-col">
+                    <h6>Resources</h6>
+                    <a href="#">API Documentation</a>
+                    <a href="#">Guides & Tutorials</a>
+                    <a href="#">System Status</a>
+                    <a href="#faq">FAQs</a>
+                </div>
+                <div class="footer-link-col">
+                    <h6>Legal</h6>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Data Processing (DPA)</a>
+                    <a href="#">Security Audits</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-container bottom-container">
+                <p class="copyright">&copy; 2026 AetherFlow Technologies, Inc. All rights reserved.</p>
+                <div class="social-icons">
+                    <!-- Twitter/X -->
+                    <a href="#" aria-label="AetherFlow Twitter/X" class="social-link" id="social-x">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4l11.733 16h4.267l-11.733-16z"/>
+                            <path d="M4 20l6.768-6.768m2.46-2.46L20 4"/>
+                        </svg>
+                    </a>
+                    <!-- Discord -->
+                    <a href="#" aria-label="AetherFlow Discord" class="social-link" id="social-discord">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8a3 3 0 0 0-3-3H9a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V8z"/>
+                            <circle cx="9.5" cy="12.5" r="1.5"/>
+                            <circle cx="14.5" cy="12.5" r="1.5"/>
+                            <path d="M8 17.5c1.5 1 4.5 1 6 0"/>
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" aria-label="AetherFlow LinkedIn" class="social-link" id="social-linkedin">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <!-- Reddit -->
+                    <a href="#" aria-label="AetherFlow Reddit" class="social-link" id="social-reddit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 8a2 2 0 1 1 2 2h-4a2 2 0 1 1 2-2z"/>
+                            <path d="M8 15h8"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
